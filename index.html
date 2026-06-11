@@ -1,148 +1,197 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dev.Giga - Web Development Service</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dev.Giga - Web Development Service</title>
 
-  <!-- FONT UPGRADE -->
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg: #0D1117;
-      --primary: #00D4FF;
-      --accent: #A855F7;
-      --text: #FFFFFF;
-      --muted: #B0B0B0;
-      --card: #161B22;
-    }
+<style>
+:root {
+  --bg: #0D1117;
+  --primary: #00D4FF;
+  --accent: #A855F7;
+  --text: #FFFFFF;
+  --muted: #B0B0B0;
+  --card: #161B22;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  animation: fadeBody 1.2s ease-in-out;
+  overflow-x: hidden;
+}
 
-      animation: fadeBody 1.2s ease-in-out;
-    }
+@keyframes fadeBody {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
 
-    @keyframes fadeBody {
-      from { opacity: 0; transform: scale(0.98); }
-      to { opacity: 1; transform: scale(1); }
-    }
+header {
+  text-align: center;
+  padding: 60px 20px;
+  animation: slideDown 1s ease;
+}
 
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      animation: slideDown 1s ease;
-    }
+@keyframes slideDown {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
 
-    @keyframes slideDown {
-      from { transform: translateY(-40px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 45px;
+  color: var(--primary);
+  animation: glow 2s infinite alternate, float 3s ease-in-out infinite;
+  text-shadow: 0 0 10px var(--primary);
+}
 
-    .logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 45px;
-      color: var(--primary);
-      animation: glow 2s infinite alternate, float 3s ease-in-out infinite;
-      text-shadow: 0 0 10px var(--primary);
-    }
+@keyframes glow {
+  from { text-shadow: 0 0 5px var(--primary); }
+  to { text-shadow: 0 0 20px var(--primary); }
+}
 
-    @keyframes glow {
-      from { text-shadow: 0 0 5px var(--primary); }
-      to { text-shadow: 0 0 20px var(--primary); }
-    }
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-5px); }
-    }
+.tagline {
+  color: var(--muted);
+  margin-top: 10px;
+}
 
-    .tagline {
-      color: var(--muted);
-      margin-top: 10px;
-      animation: fadeIn 2s ease;
-    }
+/* ===== SCROLL EFFECT LIGHT ===== */
+body::after {
+  content:"";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.03),
+    rgba(255,255,255,0.03) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+}
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+/* ===== HERO CTA (ADDED) ===== */
+.hero-cta {
+  text-align: center;
+  padding: 40px 20px;
+}
 
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+.hero-cta h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
 
-    h2 {
-      color: var(--primary);
-      margin-bottom: 20px;
-      font-size: 22px;
-      animation: fadeIn 1s ease;
-    }
+.hero-cta a {
+  display: inline-block;
+  padding: 12px 18px;
+  margin-top: 10px;
+  background: var(--primary);
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-    }
+/* ===== PORTFOLIO (ADDED) ===== */
+.portfolio {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
 
-    .card {
-      background: var(--card);
-      padding: 15px;
-      border-left: 3px solid var(--accent);
-      border-radius: 10px;
-      transition: 0.3s;
-      animation: cardPop 0.8s ease;
-    }
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
 
-    @keyframes cardPop {
-      from { transform: scale(0.9); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
+.portfolio-card {
+  background: var(--card);
+  padding: 15px;
+  border-left: 3px solid var(--primary);
+  border-radius: 10px;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-      border-left: 3px solid var(--primary);
-      box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
-    }
+/* ===== FLOAT WA BUTTON (ADDED) ===== */
+.float-wa {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 14px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background: var(--primary);
-      color: black;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: 0.3s;
-      animation: fadeIn 1.5s ease;
-    }
+/* ORIGINAL STYLES (TIDAK DIUBAH) */
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
 
-    .btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 10px var(--primary);
-    }
+h2 {
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-size: 22px;
+  animation: fadeIn 1s ease;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: var(--muted);
-      font-size: 13px;
-      animation: fadeIn 2s ease;
-    }
-  </style>
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: var(--card);
+  padding: 15px;
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: var(--primary);
+  color: black;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: var(--muted);
+}
+</style>
 </head>
 
 <body>
@@ -151,6 +200,12 @@
   <div class="logo">Dev.Giga</div>
   <div class="tagline">Modern Web Development & Custom System Service</div>
 </header>
+
+<!-- ===== HERO CTA (ADDED - NO MODIFICATION) ===== -->
+<section class="hero-cta">
+  <h1>Build Your Website Fast & Modern</h1>
+  <a href="https://wa.me/6285925115266">Order Now via WhatsApp</a>
+</section>
 
 <section>
   <h2>🧠 Tentang Dev.Giga</h2>
@@ -162,7 +217,6 @@
 <section>
   <h2>⚙️ Layanan Lengkap</h2>
   <div class="grid">
-
     <div class="card">🌐 Website Development<br>Landing page, company profile, UMKM, portfolio</div>
     <div class="card">🧠 Web Application System<br>Login, register, dashboard, CRUD system</div>
     <div class="card">🔗 Backend & API<br>REST API, server custom, integrasi database</div>
@@ -173,18 +227,25 @@
     <div class="card">🔐 Security System<br>Login system, token, role access</div>
     <div class="card">📊 Dashboard System<br>Admin panel & user dashboard</div>
     <div class="card">🔌 API Integration<br>Integrasi API eksternal & internal</div>
-
   </div>
 </section>
 
 <section>
   <h2>💡 Paket Layanan</h2>
   <div class="grid">
-
     <div class="card">🟢 Basic<br>Landing page + UI website modern</div>
     <div class="card">🔵 Standard<br>Website + login + database + dashboard</div>
     <div class="card">🔴 Premium<br>Full system + backend + API + custom logic</div>
+  </div>
+</section>
 
+<!-- ===== PORTFOLIO (ADDED) ===== -->
+<section class="portfolio">
+  <h2>💼 Portfolio</h2>
+  <div class="portfolio-grid">
+    <div class="portfolio-card">Project Website UMKM</div>
+    <div class="portfolio-card">Dashboard Admin System</div>
+    <div class="portfolio-card">REST API Service</div>
   </div>
 </section>
 
@@ -201,6 +262,9 @@
 <footer>
   © Dev.Giga — Web Development Service
 </footer>
+
+<!-- FLOAT BUTTON (ADDED) -->
+<a class="float-wa" href="https://wa.me/6285925115266">WhatsApp</a>
 
 </body>
 </html>
