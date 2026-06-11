@@ -71,7 +71,7 @@ header {
   margin-top: 10px;
 }
 
-/* ===== SCROLL EFFECT LIGHT ===== */
+/* SCROLL EFFECT */
 body::after {
   content:"";
   position: fixed;
@@ -86,7 +86,7 @@ body::after {
   pointer-events: none;
 }
 
-/* ===== HERO CTA (ADDED) ===== */
+/* HERO */
 .hero-cta {
   text-align: center;
   padding: 40px 20px;
@@ -108,7 +108,7 @@ body::after {
   text-decoration: none;
 }
 
-/* ===== PORTFOLIO (ADDED) ===== */
+/* PORTFOLIO */
 .portfolio {
   max-width: 1000px;
   margin: auto;
@@ -128,7 +128,7 @@ body::after {
   border-radius: 10px;
 }
 
-/* ===== FLOAT WA BUTTON (ADDED) ===== */
+/* FLOAT BUTTON */
 .float-wa {
   position: fixed;
   bottom: 20px;
@@ -142,7 +142,7 @@ body::after {
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
-/* ORIGINAL STYLES (TIDAK DIUBAH) */
+/* ORIGINAL SECTION STYLE */
 section {
   max-width: 1000px;
   margin: auto;
@@ -153,7 +153,6 @@ h2 {
   color: var(--primary);
   margin-bottom: 20px;
   font-size: 22px;
-  animation: fadeIn 1s ease;
 }
 
 .grid {
@@ -201,12 +200,17 @@ footer {
   <div class="tagline">Modern Web Development & Custom System Service</div>
 </header>
 
-<!-- ===== HERO CTA (ADDED - NO MODIFICATION) ===== -->
+<!-- HERO -->
 <section class="hero-cta">
   <h1>Build Your Website Fast & Modern</h1>
   <a href="https://wa.me/6285925115266">Order Now via WhatsApp</a>
+
+  <div style="margin-top:15px; color:#B0B0B0; font-size:14px;">
+    ⚡ Fast Delivery • 💻 Clean Code • 🔒 Secure System • 🤝 Client Support
+  </div>
 </section>
 
+<!-- ABOUT -->
 <section>
   <h2>🧠 Tentang Dev.Giga</h2>
   <div class="card">
@@ -214,6 +218,7 @@ footer {
   </div>
 </section>
 
+<!-- SERVICES -->
 <section>
   <h2>⚙️ Layanan Lengkap</h2>
   <div class="grid">
@@ -230,6 +235,7 @@ footer {
   </div>
 </section>
 
+<!-- PRICING -->
 <section>
   <h2>💡 Paket Layanan</h2>
   <div class="grid">
@@ -239,16 +245,43 @@ footer {
   </div>
 </section>
 
-<!-- ===== PORTFOLIO (ADDED) ===== -->
+<!-- PORTFOLIO -->
 <section class="portfolio">
   <h2>💼 Portfolio</h2>
   <div class="portfolio-grid">
-    <div class="portfolio-card">Project Website UMKM</div>
-    <div class="portfolio-card">Dashboard Admin System</div>
-    <div class="portfolio-card">REST API Service</div>
+    <div class="portfolio-card">
+      Website UMKM Modern<br>
+      <small>Landing page + responsive UI + SEO basic</small>
+    </div>
+
+    <div class="portfolio-card">
+      Admin Dashboard System<br>
+      <small>Login system + CRUD + role access + database</small>
+    </div>
+
+    <div class="portfolio-card">
+      REST API Service<br>
+      <small>Backend API + JSON response + database integration</small>
+    </div>
+
+    <div class="portfolio-card">
+      Custom Web System<br>
+      <small>Fullstack system sesuai request client</small>
+    </div>
   </div>
 </section>
 
+<!-- EXPERIENCE -->
+<section>
+  <h2>📊 Experience</h2>
+  <div class="grid">
+    <div class="card">🚀 +10 Project Completed</div>
+    <div class="card">💻 Web & Backend Specialist</div>
+    <div class="card">🌍 Client Indonesia</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section>
   <h2>📱 Contact</h2>
 
@@ -263,7 +296,6 @@ footer {
   © Dev.Giga — Web Development Service
 </footer>
 
-<!-- FLOAT BUTTON (ADDED) -->
 <a class="float-wa" href="https://wa.me/6285925115266">WhatsApp</a>
 
 </body>
