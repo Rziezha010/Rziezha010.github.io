@@ -13,8 +13,9 @@
   --primary: #00D4FF;
   --accent: #A855F7;
   --text: #FFFFFF;
-  --muted: #B0B0B0;
-  --card: #161B22;
+  --muted: #A9B1BC;
+  --card: rgba(22, 27, 34, 0.75);
+  --border: rgba(255,255,255,0.08);
 }
 
 * {
@@ -25,87 +26,101 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: var(--bg);
+  background: radial-gradient(circle at top, #111827, var(--bg));
   color: var(--text);
   line-height: 1.6;
-  animation: fadeBody 1.2s ease-in-out;
   overflow-x: hidden;
 }
 
-@keyframes fadeBody {
-  from { opacity: 0; transform: scale(0.98); }
-  to { opacity: 1; transform: scale(1); }
-}
-
+/* HEADER */
 header {
   text-align: center;
-  padding: 60px 20px;
-  animation: slideDown 1s ease;
-}
-
-@keyframes slideDown {
-  from { transform: translateY(-40px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  padding: 70px 20px 50px;
 }
 
 .logo {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 45px;
+  font-size: 48px;
   color: var(--primary);
-  animation: glow 2s infinite alternate, float 3s ease-in-out infinite;
-  text-shadow: 0 0 10px var(--primary);
-}
-
-@keyframes glow {
-  from { text-shadow: 0 0 5px var(--primary); }
-  to { text-shadow: 0 0 20px var(--primary); }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-5px); }
+  text-shadow: 0 0 20px rgba(0,212,255,0.4);
+  letter-spacing: 1px;
 }
 
 .tagline {
   color: var(--muted);
   margin-top: 10px;
-}
-
-/* SCROLL EFFECT */
-body::after {
-  content:"";
-  position: fixed;
-  inset: 0;
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(255,255,255,0.03),
-    rgba(255,255,255,0.03) 1px,
-    transparent 1px,
-    transparent 3px
-  );
-  pointer-events: none;
+  font-size: 14px;
 }
 
 /* HERO */
 .hero-cta {
   text-align: center;
-  padding: 40px 20px;
+  padding: 50px 20px;
 }
 
 .hero-cta h1 {
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 10px;
 }
 
+.hero-cta p {
+  color: var(--muted);
+  max-width: 620px;
+  margin: 0 auto 18px auto;
+  font-size: 14px;
+}
+
+/* BUTTON */
 .hero-cta a {
   display: inline-block;
-  padding: 12px 18px;
-  margin-top: 10px;
-  background: var(--primary);
+  padding: 13px 20px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
   color: black;
-  font-weight: bold;
-  border-radius: 8px;
+  font-weight: 700;
+  border-radius: 10px;
   text-decoration: none;
+  transition: 0.25s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.hero-cta a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0,212,255,0.25);
+}
+
+/* SECTION */
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h2 {
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+/* GRID & CARD */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.card, .portfolio-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  transition: 0.25s ease;
+}
+
+.card:hover, .portfolio-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0,212,255,0.25);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
 /* PORTFOLIO */
@@ -118,17 +133,27 @@ body::after {
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+  gap: 16px;
 }
 
-.portfolio-card {
-  background: var(--card);
-  padding: 15px;
-  border-left: 3px solid var(--primary);
+/* BTN */
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: black;
+  text-decoration: none;
   border-radius: 10px;
+  font-weight: 600;
+  transition: 0.2s ease;
 }
 
-/* FLOAT BUTTON */
+.btn:hover {
+  transform: scale(1.04);
+}
+
+/* FLOAT WA */
 .float-wa {
   position: fixed;
   bottom: 20px;
@@ -139,56 +164,21 @@ body::after {
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
 
-/* ORIGINAL SECTION STYLE */
-section {
-  max-width: 1000px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-h2 {
-  color: var(--primary);
-  margin-bottom: 20px;
-  font-size: 22px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-}
-
-.card {
-  background: var(--card);
-  padding: 15px;
-  border-left: 3px solid var(--accent);
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background: var(--primary);
-  color: black;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
+/* FOOTER */
 footer {
   text-align: center;
   padding: 30px;
   color: var(--muted);
+  font-size: 13px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .logo { font-size: 34px; }
+  .hero-cta h1 { font-size: 22px; }
 }
 </style>
 </head>
@@ -202,11 +192,21 @@ footer {
 
 <!-- HERO -->
 <section class="hero-cta">
-  <h1>Build Your Website Fast & Modern</h1>
-  <a href="https://wa.me/6285925115266">Order Now via WhatsApp</a>
+  <h1>Website Profesional yang Bikin Bisnis Kamu Terlihat Serius & Siap Jualan</h1>
 
-  <div style="margin-top:15px; color:#B0B0B0; font-size:14px;">
-    ⚡ Fast Delivery • 💻 Clean Code • 🔒 Secure System • 🤝 Client Support
+  <p>
+    Banyak bisnis kehilangan pelanggan karena website lambat, tidak rapi, dan tidak dipercaya.  
+    Dev.Giga membantu membuat website modern, cepat, dan siap digunakan untuk jualan atau company profile.
+  </p>
+
+  <a href="https://wa.me/6285925115266">Order via WhatsApp</a>
+
+  <div style="margin-top:12px; color:#A9B1BC; font-size:13px;">
+    ⚡ Respon cepat • 💻 Coding rapi • 🔒 Aman & scalable • 🤝 Bisa revisi
+  </div>
+
+  <div style="margin-top:8px; font-size:12px; color:#00D4FF;">
+    🚀 Slot project terbatas tiap minggu
   </div>
 </section>
 
@@ -214,7 +214,11 @@ footer {
 <section>
   <h2>🧠 Tentang Dev.Giga</h2>
   <div class="card">
-    Dev.Giga adalah layanan pengembangan website dan sistem digital modern yang berfokus pada pembuatan website, API, backend, dan aplikasi custom dengan desain futuristik dan performa tinggi.
+    Dev.Giga adalah layanan pengembangan website dan sistem digital modern yang berfokus pada pembuatan website, API, backend, dan aplikasi custom dengan desain profesional dan performa tinggi.
+    <br><br>
+    <small style="color:#A9B1BC;">
+      Fokus utama: membantu UMKM, bisnis, dan personal brand untuk tampil profesional di internet.
+    </small>
   </div>
 </section>
 
@@ -239,7 +243,7 @@ footer {
 <section>
   <h2>💡 Paket Layanan</h2>
   <div class="grid">
-    <div class="card">🟢 Basic<br>Landing page + UI website modern</div>
+    <div class="card">🟢 Basic<br>Landing page + UI modern</div>
     <div class="card">🔵 Standard<br>Website + login + database + dashboard</div>
     <div class="card">🔴 Premium<br>Full system + backend + API + custom logic</div>
   </div>
@@ -251,22 +255,22 @@ footer {
   <div class="portfolio-grid">
     <div class="portfolio-card">
       Website UMKM Modern<br>
-      <small>Landing page + responsive UI + SEO basic</small>
+      <small>Responsive UI + SEO basic</small>
     </div>
 
     <div class="portfolio-card">
       Admin Dashboard System<br>
-      <small>Login system + CRUD + role access + database</small>
+      <small>Login + CRUD + role access</small>
     </div>
 
     <div class="portfolio-card">
       REST API Service<br>
-      <small>Backend API + JSON response + database integration</small>
+      <small>Backend JSON + database</small>
     </div>
 
     <div class="portfolio-card">
       Custom Web System<br>
-      <small>Fullstack system sesuai request client</small>
+      <small>Fullstack sesuai request</small>
     </div>
   </div>
 </section>
@@ -285,11 +289,14 @@ footer {
 <section>
   <h2>📱 Contact</h2>
 
-  <div class="card">📱 WhatsApp: 085925115266</div>
+  <div class="card">
+    📱 WhatsApp: 085925115266 <br>
+    <small style="color:#A9B1BC;">Chat langsung untuk konsultasi gratis sebelum order</small>
+  </div>
 
   <a class="btn" href="https://chat.whatsapp.com/KznMbJEGxbxECxaDAga8P8">WhatsApp Group</a>
-  <a class="btn" href="https://discord.gg/FeQX5paF7">Discord Community</a>
-  <a class="btn" href="https://tiktok.me/group/ZSQJg6xqp/">TikTok Group</a>
+  <a class="btn" href="https://discord.gg/FeQX5paF7">Discord</a>
+  <a class="btn" href="https://tiktok.me/group/ZSQJg6xqp/">TikTok</a>
 </section>
 
 <footer>
