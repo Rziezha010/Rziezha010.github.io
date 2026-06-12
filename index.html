@@ -1,9 +1,10 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Website UMKM - Order Lebih Mudah Lewat WhatsApp</title>
+
+<title>Website UMKM - Order WhatsApp Lebih Mudah</title>
 
 <style>
 body{
@@ -14,13 +15,28 @@ body{
 }
 
 .hero{
-  text-align:center;
-  padding:100px 20px;
-  background:linear-gradient(135deg,#111,#333);
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  padding:80px 20px;
+  background:linear-gradient(135deg,#111,#222);
+  gap:30px;
 }
 
-h1{font-size:40px;}
-p{color:#bbb;}
+.hero-text{
+  max-width:500px;
+}
+
+h1{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+p{
+  color:#bbb;
+  line-height:1.6;
+}
 
 .btn{
   display:inline-block;
@@ -33,10 +49,18 @@ p{color:#bbb;}
   font-weight:bold;
 }
 
+.hero img{
+  width:100%;
+  max-width:380px;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
 section{
   padding:60px 20px;
   max-width:900px;
   margin:auto;
+  text-align:center;
 }
 
 .grid{
@@ -49,7 +73,6 @@ section{
   background:#1a1a1a;
   padding:20px;
   border-radius:12px;
-  text-align:center;
   border:1px solid #333;
 }
 
@@ -65,66 +88,82 @@ footer{
 
 <body>
 
+<!-- HERO -->
 <div class="hero">
-  <h1>Bangun Website Untuk Bisnis Kamu</h1>
-  <p>Biar pelanggan bisa langsung order lewat WhatsApp tanpa ribet</p>
-  <a class="btn" href="https://wa.me/6285925115266">Chat Sekarang</a>
+
+  <div class="hero-text">
+    <h1>Website Untuk UMKM Biar Order Lebih Mudah</h1>
+    <p>
+      Bantu warung, cafe, laundry, dan bisnis kecil supaya pelanggan bisa langsung order lewat WhatsApp tanpa bingung.
+    </p>
+
+    <a class="btn" href="https://wa.me/6285925115266">Chat WhatsApp</a>
+  </div>
+
+  <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba" alt="UMKM Food Order">
+  
 </div>
 
+<!-- PROBLEM -->
 <section>
-  <h2 style="text-align:center;">Kenapa Butuh Website?</h2>
-  <p style="text-align:center;">
+  <h2>Kenapa Perlu Website?</h2>
+  <p style="color:#bbb;">
     Banyak UMKM kehilangan pelanggan karena tidak ada tempat order yang jelas.
   </p>
 
   <div class="grid">
 
     <div class="card">
-      <h3>📲 Order Lebih Mudah</h3>
-      <p>Pelanggan tinggal klik WhatsApp</p>
+      📲 Pelanggan bingung cara order
     </div>
 
     <div class="card">
-      <h3>🍔 Cocok UMKM</h3>
-      <p>Warung, cafe, laundry, barber</p>
+      ❌ Tidak ada sistem order jelas
     </div>
 
     <div class="card">
-      <h3>⚡ Cepat & Simple</h3>
-      <p>Tidak ribet, langsung jalan</p>
+      💸 Kehilangan potensi penjualan
     </div>
 
   </div>
 </section>
 
-<section style="text-align:center;">
-  <h2>Contoh Hasil</h2>
-  <p>
-    Website ini dibuat supaya pelanggan langsung ngerti cara order tanpa tanya-tanya lagi.
-  </p>
-  <a class="btn" href="https://wa.me/6285925115266">Mau Dibuatkan</a>
-</section>
-
+<!-- SOLUTION -->
 <section>
-  <h2 style="text-align:center;">Apa yang Kamu Dapat?</h2>
+  <h2>Solusi Sederhana</h2>
 
   <div class="grid">
 
-    <div class="card">Halaman menu / jasa</div>
-    <div class="card">Tombol WhatsApp langsung</div>
-    <div class="card">Desain simpel & cepat</div>
+    <div class="card">Order langsung WhatsApp</div>
+    <div class="card">Tampilan simpel & cepat</div>
+    <div class="card">Cocok untuk semua UMKM</div>
 
   </div>
 </section>
 
-<section style="text-align:center;">
+<!-- RESULT -->
+<section>
+  <h2>Contoh Hasil</h2>
+
+  <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" 
+  style="width:100%;max-width:500px;border-radius:12px;margin-top:15px;">
+
+  <p style="color:#bbb;margin-top:15px;">
+    Website ini membantu pelanggan langsung order tanpa harus tanya-tanya lagi.
+  </p>
+
+  <a class="btn" href="https://wa.me/6285925115266">Mau Dibuatkan</a>
+</section>
+
+<!-- CTA -->
+<section>
   <h2>Siap Punya Website?</h2>
-  <p>Kirim nama usaha kamu, nanti saya bantu buatkan</p>
+  <p style="color:#bbb;">Kirim nama usaha kamu, nanti saya buatkan landing page sederhana.</p>
   <a class="btn" href="https://wa.me/6285925115266">Mulai Sekarang</a>
 </section>
 
 <footer>
-© Dev.Giga - Website UMKM Order System
+© Website UMKM Order System
 </footer>
 
 </body>
