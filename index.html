@@ -1,297 +1,130 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Dev.Giga — High-Performance Infrastructure Studio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<title>Website UMKM - Order Lebih Mudah Lewat WhatsApp</title>
 
 <style>
-:root{
-  --bg:#05070D;
-  --text:#EAF0FF;
-  --muted:#9AA4B2;
-  --line:rgba(255,255,255,0.08);
-  --primary:#00D4FF;
-  --accent:#A855F7;
-}
-
-*{margin:0;padding:0;box-sizing:border-box;}
-
 body{
-  font-family:Inter;
-  background:
-    radial-gradient(900px circle at 20% 10%, rgba(0,212,255,0.10), transparent 55%),
-    radial-gradient(700px circle at 80% 30%, rgba(168,85,247,0.10), transparent 60%),
-    var(--bg);
-  color:var(--text);
+  margin:0;
+  font-family:Arial;
+  background:#0f0f0f;
+  color:white;
 }
 
-/* NAV */
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  backdrop-filter:blur(18px);
-  background:rgba(10,12,18,0.55);
-  border-bottom:1px solid var(--line);
-  z-index:1000;
+.hero{
+  text-align:center;
+  padding:100px 20px;
+  background:linear-gradient(135deg,#111,#333);
 }
 
-.nav-inner{
-  max-width:1100px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  padding:14px 20px;
-}
-
-.logo{
-  font-family:"Space Grotesk";
-  color:var(--primary);
-  font-weight:700;
-}
+h1{font-size:40px;}
+p{color:#bbb;}
 
 .btn{
-  background:linear-gradient(135deg,var(--primary),var(--accent));
-  padding:10px 16px;
-  border-radius:12px;
-  color:#000;
-  font-weight:700;
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 18px;
+  background:#22c55e;
+  color:white;
   text-decoration:none;
+  border-radius:10px;
+  font-weight:bold;
 }
 
-/* HERO */
-.hero{
-  padding:180px 20px 100px;
+section{
+  padding:60px 20px;
   max-width:900px;
   margin:auto;
 }
 
-.kicker{
-  color:var(--primary);
-  font-size:12px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
-
-h1{
-  font-family:"Space Grotesk";
-  font-size:60px;
-  line-height:1.05;
-  margin-top:12px;
-}
-
-.hero p{
-  color:var(--muted);
-  margin-top:16px;
-  font-size:17px;
-  max-width:720px;
-}
-
-.cta{
-  display:flex;
-  gap:12px;
-  margin-top:28px;
-  flex-wrap:wrap;
-}
-
-/* SECTIONS */
-section{
-  max-width:1100px;
-  margin:auto;
-  padding:90px 20px;
-}
-
-h2{
-  font-family:"Space Grotesk";
-  font-size:34px;
-  margin-bottom:18px;
-}
-
-/* GRID */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:16px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
 }
 
-/* CARDS */
 .card{
-  border:1px solid var(--line);
+  background:#1a1a1a;
   padding:20px;
-  border-radius:16px;
-  background:rgba(255,255,255,0.02);
-}
-
-/* STORY BLOCK */
-.story{
-  border-left:2px solid var(--primary);
-  padding-left:16px;
-  color:var(--muted);
-  line-height:1.7;
-}
-
-/* CASE */
-.case{
-  background:linear-gradient(135deg,rgba(0,212,255,0.05),rgba(168,85,247,0.05));
-  border:1px solid var(--line);
-  padding:24px;
-  border-radius:18px;
-}
-
-/* PRICING */
-.price{
-  border:1px solid var(--line);
-  padding:22px;
-  border-radius:16px;
-}
-
-.highlight{
-  border-color:var(--primary);
-  box-shadow:0 0 30px rgba(0,212,255,0.12);
-}
-
-/* CTA FINAL */
-.final{
+  border-radius:12px;
   text-align:center;
-  padding:120px 20px;
+  border:1px solid #333;
 }
 
 footer{
   text-align:center;
-  padding:40px;
-  color:var(--muted);
-  border-top:1px solid var(--line);
+  padding:30px;
+  color:#777;
+  border-top:1px solid #222;
 }
 </style>
+
 </head>
 
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <div class="logo">Dev.Giga</div>
-    <a class="btn" href="https://wa.me/6285925115266">Start Audit</a>
+<div class="hero">
+  <h1>Bangun Website Untuk Bisnis Kamu</h1>
+  <p>Biar pelanggan bisa langsung order lewat WhatsApp tanpa ribet</p>
+  <a class="btn" href="https://wa.me/6285925115266">Chat Sekarang</a>
+</div>
+
+<section>
+  <h2 style="text-align:center;">Kenapa Butuh Website?</h2>
+  <p style="text-align:center;">
+    Banyak UMKM kehilangan pelanggan karena tidak ada tempat order yang jelas.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>📲 Order Lebih Mudah</h3>
+      <p>Pelanggan tinggal klik WhatsApp</p>
+    </div>
+
+    <div class="card">
+      <h3>🍔 Cocok UMKM</h3>
+      <p>Warung, cafe, laundry, barber</p>
+    </div>
+
+    <div class="card">
+      <h3>⚡ Cepat & Simple</h3>
+      <p>Tidak ribet, langsung jalan</p>
+    </div>
+
   </div>
-</nav>
+</section>
 
-<main>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="kicker">INFRASTRUCTURE ENGINEERING STUDIO</div>
-
-  <h1>
-    We Fix the Invisible Bottlenecks That Kill Your Revenue
-  </h1>
-
+<section style="text-align:center;">
+  <h2>Contoh Hasil</h2>
   <p>
-    Most companies don’t fail because of product or marketing.
-    They fail because their system cannot handle growth.
+    Website ini dibuat supaya pelanggan langsung ngerti cara order tanpa tanya-tanya lagi.
   </p>
-
-  <div class="cta">
-    <a class="btn" href="https://wa.me/6285925115266">Get System Audit</a>
-    <a class="btn" href="#case">See Case Study</a>
-  </div>
+  <a class="btn" href="https://wa.me/6285925115266">Mau Dibuatkan</a>
 </section>
 
-<!-- STORY -->
 <section>
-  <h2>The Reality Most Founders Miss</h2>
-
-  <div class="story">
-    Your system might look fine on the surface.
-    <br><br>
-    But under real traffic, things start breaking:
-    slow APIs, unstable database, failed requests, lost conversions.
-    <br><br>
-    These problems don’t show in dashboards — but they show in revenue.
-  </div>
-</section>
-
-<!-- SOLUTION -->
-<section>
-  <h2>What We Do</h2>
-
-  <div class="grid">
-    <div class="card">Identify hidden performance bottlenecks</div>
-    <div class="card">Rebuild weak system architecture layers</div>
-    <div class="card">Optimize backend & frontend performance</div>
-    <div class="card">Stabilize systems under high traffic load</div>
-  </div>
-</section>
-
-<!-- CASE STUDY -->
-<section id="case">
-  <h2>Case Study</h2>
-
-  <div class="case">
-    <b>E-Commerce Scaling Fix</b>
-    <p style="color:var(--muted);margin-top:10px;">
-      Problem: High traffic but poor conversion due to slow product pages.
-    </p>
-
-    <p style="margin-top:10px;">
-      Solution: Optimized backend response + caching architecture redesign.
-    </p>
-
-    <p style="margin-top:10px;">
-      Result:<br>
-      +41% conversion rate<br>
-      -54% load time<br>
-      +27% revenue uplift in 30 days
-    </p>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section>
-  <h2>Engagement</h2>
+  <h2 style="text-align:center;">Apa yang Kamu Dapat?</h2>
 
   <div class="grid">
 
-    <div class="price">
-      <b>System Audit</b>
-      <p style="color:var(--muted);margin-top:8px;">Find performance bottlenecks</p>
-      <p><b>$150+</b></p>
-    </div>
-
-    <div class="price highlight">
-      <b>Optimization Sprint</b>
-      <p style="color:var(--muted);margin-top:8px;">Fix critical system issues</p>
-      <p><b>$500 – $2,000</b></p>
-    </div>
-
-    <div class="price">
-      <b>Full Build</b>
-      <p style="color:var(--muted);margin-top:8px;">End-to-end infrastructure</p>
-      <p><b>$2,000+</b></p>
-    </div>
+    <div class="card">Halaman menu / jasa</div>
+    <div class="card">Tombol WhatsApp langsung</div>
+    <div class="card">Desain simpel & cepat</div>
 
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="final">
-  <h2>Not Every System Qualifies</h2>
-
-  <p style="color:var(--muted);max-width:600px;margin:auto;">
-    We only work with products that already have traction but are limited by infrastructure.
-  </p>
-
-  <div class="cta" style="justify-content:center;margin-top:20px;">
-    <a class="btn" href="https://wa.me/6285925115266">Request Audit</a>
-  </div>
+<section style="text-align:center;">
+  <h2>Siap Punya Website?</h2>
+  <p>Kirim nama usaha kamu, nanti saya bantu buatkan</p>
+  <a class="btn" href="https://wa.me/6285925115266">Mulai Sekarang</a>
 </section>
-
-</main>
 
 <footer>
-© Dev.Giga — Infrastructure Engineering Studio
+© Dev.Giga - Website UMKM Order System
 </footer>
 
 </body>
