@@ -1,261 +1,298 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Dev.Giga — Premium Web Studio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Dev.Giga — High-Performance Infrastructure Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#0A0D14;
-  --card:rgba(255,255,255,0.04);
-  --border:rgba(255,255,255,0.08);
-  --text:#E9EEF5;
+  --bg:#05070D;
+  --text:#EAF0FF;
   --muted:#9AA4B2;
+  --line:rgba(255,255,255,0.08);
   --primary:#00D4FF;
   --accent:#A855F7;
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
   font-family:Inter;
-  background: radial-gradient(circle at top,#111827,var(--bg));
+  background:
+    radial-gradient(900px circle at 20% 10%, rgba(0,212,255,0.10), transparent 55%),
+    radial-gradient(700px circle at 80% 30%, rgba(168,85,247,0.10), transparent 60%),
+    var(--bg);
   color:var(--text);
 }
 
 /* NAV */
-.nav{
+nav{
   position:fixed;
   top:0;
   width:100%;
-  backdrop-filter:blur(16px);
-  background:rgba(10,12,18,.55);
-  border-bottom:1px solid var(--border);
-  z-index:999;
+  backdrop-filter:blur(18px);
+  background:rgba(10,12,18,0.55);
+  border-bottom:1px solid var(--line);
+  z-index:1000;
 }
 
 .nav-inner{
-  max-width:1000px;
+  max-width:1100px;
   margin:auto;
-  padding:14px 20px;
   display:flex;
   justify-content:space-between;
-  align-items:center;
+  padding:14px 20px;
 }
 
 .logo{
   font-family:"Space Grotesk";
-  font-weight:700;
   color:var(--primary);
+  font-weight:700;
 }
 
-.nav a{
+.btn{
   background:linear-gradient(135deg,var(--primary),var(--accent));
-  padding:8px 14px;
-  border-radius:10px;
+  padding:10px 16px;
+  border-radius:12px;
+  color:#000;
+  font-weight:700;
   text-decoration:none;
-  color:black;
-  font-weight:800;
 }
 
 /* HERO */
 .hero{
-  text-align:center;
-  padding:140px 20px 70px;
+  padding:180px 20px 100px;
+  max-width:900px;
+  margin:auto;
 }
 
-.hero h1{
+.kicker{
+  color:var(--primary);
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+h1{
   font-family:"Space Grotesk";
-  font-size:40px;
-  line-height:1.1;
+  font-size:60px;
+  line-height:1.05;
+  margin-top:12px;
 }
 
 .hero p{
-  margin-top:14px;
   color:var(--muted);
-  max-width:600px;
-  margin-inline:auto;
+  margin-top:16px;
+  font-size:17px;
+  max-width:720px;
 }
 
-.btn{
-  margin-top:26px;
-  display:inline-block;
-  padding:14px 22px;
-  border-radius:12px;
-  background:linear-gradient(135deg,var(--primary),var(--accent));
-  color:black;
-  font-weight:800;
-  text-decoration:none;
-  transition:.25s;
+.cta{
+  display:flex;
+  gap:12px;
+  margin-top:28px;
+  flex-wrap:wrap;
 }
 
-.btn:hover{
-  transform:translateY(-4px);
-  box-shadow:0 20px 40px rgba(0,212,255,.12);
-}
-
-/* SECTION */
+/* SECTIONS */
 section{
-  max-width:1000px;
+  max-width:1100px;
   margin:auto;
-  padding:70px 20px;
+  padding:90px 20px;
 }
 
 h2{
   font-family:"Space Grotesk";
+  font-size:34px;
   margin-bottom:18px;
-  color:var(--primary);
 }
 
 /* GRID */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:16px;
 }
 
-/* CARD */
+/* CARDS */
 .card{
-  background:var(--card);
-  border:1px solid var(--border);
-  padding:18px;
+  border:1px solid var(--line);
+  padding:20px;
   border-radius:16px;
-  backdrop-filter:blur(14px);
-  transition:.3s;
+  background:rgba(255,255,255,0.02);
 }
 
-.card:hover{
-  transform:translateY(-8px);
-  border-color:rgba(0,212,255,.25);
+/* STORY BLOCK */
+.story{
+  border-left:2px solid var(--primary);
+  padding-left:16px;
+  color:var(--muted);
+  line-height:1.7;
 }
 
-/* FLOAT */
-.float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  padding:14px 16px;
-  border-radius:50px;
-  font-weight:700;
-  text-decoration:none;
+/* CASE */
+.case{
+  background:linear-gradient(135deg,rgba(0,212,255,0.05),rgba(168,85,247,0.05));
+  border:1px solid var(--line);
+  padding:24px;
+  border-radius:18px;
 }
 
-/* FADE */
-.fade{
-  opacity:0;
-  transform:translateY(18px);
-  transition:.8s ease;
+/* PRICING */
+.price{
+  border:1px solid var(--line);
+  padding:22px;
+  border-radius:16px;
 }
 
-.fade.show{
-  opacity:1;
-  transform:translateY(0);
+.highlight{
+  border-color:var(--primary);
+  box-shadow:0 0 30px rgba(0,212,255,0.12);
 }
 
-/* FOOTER */
+/* CTA FINAL */
+.final{
+  text-align:center;
+  padding:120px 20px;
+}
+
 footer{
   text-align:center;
-  padding:50px;
+  padding:40px;
   color:var(--muted);
-  font-size:13px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .hero h1{font-size:28px}
+  border-top:1px solid var(--line);
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<div class="nav">
+<nav>
   <div class="nav-inner">
     <div class="logo">Dev.Giga</div>
-    <a href="https://wa.me/6285925115266">Contact</a>
+    <a class="btn" href="https://wa.me/6285925115266">Start Audit</a>
   </div>
-</div>
+</nav>
+
+<main>
 
 <!-- HERO -->
-<div class="hero fade">
-  <h1>We Build Websites That Feel Premium & Convert 🚀</h1>
+<section class="hero">
+  <div class="kicker">INFRASTRUCTURE ENGINEERING STUDIO</div>
+
+  <h1>
+    We Fix the Invisible Bottlenecks That Kill Your Revenue
+  </h1>
+
   <p>
-    Modern web development for businesses that want speed, design quality, and real results.
+    Most companies don’t fail because of product or marketing.
+    They fail because their system cannot handle growth.
   </p>
-  <a class="btn" href="https://wa.me/6285925115266">Start Project</a>
-</div>
 
-<!-- STATS -->
-<section class="fade">
+  <div class="cta">
+    <a class="btn" href="https://wa.me/6285925115266">Get System Audit</a>
+    <a class="btn" href="#case">See Case Study</a>
+  </div>
+</section>
+
+<!-- STORY -->
+<section>
+  <h2>The Reality Most Founders Miss</h2>
+
+  <div class="story">
+    Your system might look fine on the surface.
+    <br><br>
+    But under real traffic, things start breaking:
+    slow APIs, unstable database, failed requests, lost conversions.
+    <br><br>
+    These problems don’t show in dashboards — but they show in revenue.
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section>
+  <h2>What We Do</h2>
+
   <div class="grid">
-    <div class="card">🚀 10+ Delivered</div>
-    <div class="card">⚡ Fast Performance</div>
-    <div class="card">💎 Clean UI System</div>
+    <div class="card">Identify hidden performance bottlenecks</div>
+    <div class="card">Rebuild weak system architecture layers</div>
+    <div class="card">Optimize backend & frontend performance</div>
+    <div class="card">Stabilize systems under high traffic load</div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="fade">
-  <h2>About</h2>
-  <div class="card">
-    Dev.Giga is a web development studio focused on building scalable systems, APIs, dashboards, and modern websites with premium UI/UX.
+<!-- CASE STUDY -->
+<section id="case">
+  <h2>Case Study</h2>
+
+  <div class="case">
+    <b>E-Commerce Scaling Fix</b>
+    <p style="color:var(--muted);margin-top:10px;">
+      Problem: High traffic but poor conversion due to slow product pages.
+    </p>
+
+    <p style="margin-top:10px;">
+      Solution: Optimized backend response + caching architecture redesign.
+    </p>
+
+    <p style="margin-top:10px;">
+      Result:<br>
+      +41% conversion rate<br>
+      -54% load time<br>
+      +27% revenue uplift in 30 days
+    </p>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="fade">
-  <h2>Services</h2>
+<!-- PRICING -->
+<section>
+  <h2>Engagement</h2>
+
   <div class="grid">
-    <div class="card">Landing Page</div>
-    <div class="card">Web Application</div>
-    <div class="card">Backend API</div>
-    <div class="card">Database System</div>
-    <div class="card">Dashboard UI</div>
-    <div class="card">Custom System</div>
+
+    <div class="price">
+      <b>System Audit</b>
+      <p style="color:var(--muted);margin-top:8px;">Find performance bottlenecks</p>
+      <p><b>$150+</b></p>
+    </div>
+
+    <div class="price highlight">
+      <b>Optimization Sprint</b>
+      <p style="color:var(--muted);margin-top:8px;">Fix critical system issues</p>
+      <p><b>$500 – $2,000</b></p>
+    </div>
+
+    <div class="price">
+      <b>Full Build</b>
+      <p style="color:var(--muted);margin-top:8px;">End-to-end infrastructure</p>
+      <p><b>$2,000+</b></p>
+    </div>
+
   </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section class="fade">
-  <h2>Work</h2>
-  <div class="grid">
-    <div class="card">UMKM Website</div>
-    <div class="card">Admin Dashboard</div>
-    <div class="card">REST API System</div>
-    <div class="card">Custom Platform</div>
+<!-- FINAL CTA -->
+<section class="final">
+  <h2>Not Every System Qualifies</h2>
+
+  <p style="color:var(--muted);max-width:600px;margin:auto;">
+    We only work with products that already have traction but are limited by infrastructure.
+  </p>
+
+  <div class="cta" style="justify-content:center;margin-top:20px;">
+    <a class="btn" href="https://wa.me/6285925115266">Request Audit</a>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="fade">
-  <h2>Contact</h2>
-  <div class="card">
-    WhatsApp: 085925115266
-  </div>
-
-  <a class="btn" href="https://wa.me/6285925115266">Chat Now</a>
-</section>
+</main>
 
 <footer>
-  © Dev.Giga — Premium Web Studio
+© Dev.Giga — Infrastructure Engineering Studio
 </footer>
-
-<a class="float" href="https://wa.me/6285925115266">WA</a>
-
-<script>
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting)e.target.classList.add("show");
-  });
-});
-document.querySelectorAll(".fade").forEach(el=>observer.observe(el));
-</script>
 
 </body>
 </html>
